@@ -13,7 +13,7 @@ Now test it:
 
     >>> bg = BaseGeometry()
     
-    >>> bg.integer_validator("my_int", 13)
+    >>> bg.integer_validator("my_int", 12)
 
     >>> bg.integer_validator("width", 89)
 
@@ -29,11 +29,11 @@ Now test it:
     Traceback (most recent call last):
     ValueError: age must be greater than 0
     
-    >>> bg.integer_validator("distance", -3)
+    >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
     ValueError: distance must be greater than 0
 
-    >>> bg.integer_validator("average", 6.9)
+    >>> bg.integer_validator("average", 7.8)
     Traceback (most recent call last):
     TypeError: average must be an integer
 
@@ -45,7 +45,7 @@ Now test it:
     Traceback (most recent call last):
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-    >>> bg.integer_validator("Tsega", float('tsega'))
+    >>> bg.integer_validator("NaN", float('nan'))
     Traceback (most recent call last):
     TypeError: NaN must be an integer
 
