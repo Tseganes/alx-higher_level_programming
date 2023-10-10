@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+
+"""Define text file reading function. """
+
 def read_file(filename=""):
-    with open(filename, 'r') as f:
-        for li in f:
-            print(li, end="")
-    f.closed
+    """Print the cintents of a UTF8 text file to stdout."""
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
