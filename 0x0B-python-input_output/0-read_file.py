@@ -5,4 +5,6 @@
 def read_file(filename=""):
     """Print the cintents of a UTF8 text file to stdout."""
     with open(filename, "r", encoding="utf-8") as f:
-        print(f.read(), end="")
+         for line in f:
+            print(line, end='')
+    f.close()
